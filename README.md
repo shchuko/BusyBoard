@@ -1,5 +1,5 @@
 # BusyBoard
-### Educational toy for small children
+### Educational toy for small children built on [Arduino](https://arduino.cc) platform
 
 
 #### Required libraries:
