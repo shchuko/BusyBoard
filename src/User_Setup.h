@@ -1,0 +1,4 @@
+#ifdef _BUSY_BOARD_USER_SETUP_H_
+#define _BUSY_BOARD_USER_SETUP_H_
+
+#endif //_BUSY_BOARD_USER_SETUP_H_
