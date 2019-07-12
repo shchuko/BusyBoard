@@ -1,15 +1,15 @@
 cmake_minimum_required(VERSION 2.8.4)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/ArduinoToolchain.cmake)
 set(CMAKE_CXX_STANDARD 14)
-set(PROJECT_NAME BusyBoard)
+set(PROJECT_NAME src)
 
-set(${PROJECT_NAME}_BOARD mini)
-set(ARDUINO_CPU atmega328)
+set(${PROJECT_NAME}_BOARD nano)
+set(ARDUINO_CPU atmega328old)
 project(${PROJECT_NAME})
 
 # Define additional source and header files or default arduino sketch files
-# set(${PROJECT_NAME}_SRCS)
-set(${PROJECT_NAME}_HDRS User_Setup.h)
+set(${PROJECT_NAME}_SRCS busy_board.ino CRGBLED/CRGBLED.cpp CAnimalsGame/CAnimalsGame.cpp CColorsGame/CColorsGame.cpp)
+set(${PROJECT_NAME}_HDRS CRGBLED/CRGBLED.h CAnimalsGame/CAnimalsGame.h CColorsGame/CColorsGame.h)
 
 ### Additional static libraries to include in the target.
 # set(${PROJECT_NAME}_LIBS)
@@ -29,13 +29,18 @@ link_directories(/home/shchuko/Arduino/libraries)
 # For nested library sources replace ${LIB_NAME} with library name for each library
 set(Keypad_RECURSE true)
 set(DFMiniMp3_RECURSE true)
+set(CRGBLED_RECURSE true)
+set(CAnimalsGame_RECURSE true)
+set(CRGBGame_RECURSE true)
+set(EEPROM_RECURSE true)
 
 #### Additional settings for programmer. From programmers.txt
-set(${PROJECT_NAME}_PROGRAMMER arduinoisp)
-# set(${PROJECT_NAME}_PORT /dev/cu.usbserial-00000000)
-# set(mini.upload.speed 9600)
+set(${PROJECT_NAME}_PROGRAMMER avrisp)
+set(${PROJECT_NAME}_PORT /dev/ttyUSB0)
+# set(nano.upload.speed 9600)
 
 ## Verbose build process
 # set(${PROJECT_NAME}_AFLAGS -v)
+set(_RECURSE true)
 
 generate_arduino_firmware(${PROJECT_NAME})
