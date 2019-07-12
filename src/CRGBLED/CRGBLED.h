@@ -1,3 +1,7 @@
+/** Small lib to remote RGB-LED
+ *  uses analogWrite() func, so led pins must be connected to the pins with PWM support
+ */
+
 #ifndef SRC_CRGBLED_H
 #define SRC_CRGBLED_H
 

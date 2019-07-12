@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.4)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/ArduinoToolchain.cmake)
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 set(PROJECT_NAME src)
 
 set(${PROJECT_NAME}_BOARD nano)
@@ -8,8 +8,8 @@ set(ARDUINO_CPU atmega328old)
 project(${PROJECT_NAME})
 
 # Define additional source and header files or default arduino sketch files
-set(${PROJECT_NAME}_SRCS busy_board.ino CRGBLED/CRGBLED.cpp CAnimalsGame/CAnimalsGame.cpp CColorsGame/CColorsGame.cpp)
-set(${PROJECT_NAME}_HDRS CRGBLED/CRGBLED.h CAnimalsGame/CAnimalsGame.h CColorsGame/CColorsGame.h)
+set(${PROJECT_NAME}_SRCS busy_board.ino CRGBLED/CRGBLED.cpp CAnimalsGame/CAnimalsGame.cpp CPlayer/CPlayer.cpp)
+set(${PROJECT_NAME}_HDRS CRGBLED/CRGBLED.h CAnimalsGame/CAnimalsGame.h CColorsGame/CColorsGame.h CPlayer/CPlayer.h)
 
 ### Additional static libraries to include in the target.
 # set(${PROJECT_NAME}_LIBS)
@@ -33,6 +33,7 @@ set(CRGBLED_RECURSE true)
 set(CAnimalsGame_RECURSE true)
 set(CRGBGame_RECURSE true)
 set(EEPROM_RECURSE true)
+set(CPlayer_RECURSE true)
 
 #### Additional settings for programmer. From programmers.txt
 set(${PROJECT_NAME}_PROGRAMMER avrisp)
