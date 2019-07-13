@@ -29,7 +29,7 @@ constexpr char KEYPAD_KEYS[KEYPAD_ROWS][KEYPAD_COLS] = {
         {'F', 'G', 'H', 'I', 'J'},
         {'K', 'L', 'M', 'N', 'O'},
         {'P', 'Q', 'R', 'S', 'T'},
-        {'U', 'V', 'W', 'X', 'Y'}
+        {'U', 'X', 'X', 'X', 'Y'}
 };
 
 uint8_t ROW_PINS[KEYPAD_ROWS] = {2, 3, 4, 5, 6};
@@ -41,7 +41,6 @@ uint8_t COL_PINS[KEYPAD_COLS] = {7, 8, 12, 14, 15};
  */
 // uncomment this define if you need to write default volume level into EEPROM
 //#define PLAYER_VOLUME_LEVEL_DEFAULT 15
-
 constexpr uint32_t PLAYER_EEPROM_CELL_IDX = 0;
 
 /* Volume change keys */
@@ -49,13 +48,14 @@ constexpr char PLAYER_INC_VOL_KEY = 'N';
 constexpr char PLAYER_DEC_VOL_KEY = 'O';
 
 /* Basic sounds tracks */
-constexpr uint8_t PLAYER_NUMBERS_TRACKS_NO[12] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+constexpr uint8_t PLAYER_NUMBERS_TRACKS_NO[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+constexpr uint8_t PLAYER_NOTIFY_TRACK_NO = 11;
 constexpr uint8_t PLAYER_CHOOSE_TRACK_NO = 12;
 constexpr uint8_t PLAYER_CORRECT_ANSW_TRACK_NO = 13;
 constexpr uint8_t PLAYER_WRONG_ANSW_TRACK_NO = 14;
-constexpr uint8_t PLAYER_TESTING_START_TRACK_NO = 15;
+constexpr uint8_t PLAYER_TEST_START_TRACK_NO = 15;
 constexpr uint8_t PLAYER_LEARN_START_TRACK_NO = 16;
-constexpr uint8_t PLAYER_SYSTEM_SOUND_TRACK_NO = 17;
+constexpr uint8_t PLAYER_BEEP_TRACK_NO = 17;
 
 /* Time intervals settings */
 constexpr uint32_t PLAYER_WAIT_BEFORE_PLAY_NEXT_MILLIS = 2000;
@@ -105,25 +105,59 @@ constexpr uint8_t ANIMALS_MODE_LED_RED_PIN = 16;
 constexpr uint8_t ANIMALS_COUNT = 6;
 
 /* Keys commands */
-constexpr char ANIMALS_COMMAND[ANIMALS_COUNT] = {'P', 'Q', 'R', 'S', 'T', 'Y'};
+constexpr char ANIMALS_COMMANDS[ANIMALS_COUNT] = {'P', 'Q', 'R', 'S', 'T', 'Y'};
 constexpr char ANIMALS_GAME_MODE_CMD = 'U';
 constexpr char ANIMALS_SWITCH_TRACKLIST_CMD = 'X';
 
+/* Soundpacks size constants */
+constexpr uint8_t ANIMALS_LEARN_SOUNDPACKS_CNT = 2;
+constexpr uint8_t ANIMALS_TEST_SOUNDPACKS_CNT = 2;
+
 /* Soundtracks */
-constexpr uint8_t ANIMALS_TRACKLST1[ANIMALS_COUNT] = {29, 30, 31, 32, 33, 34};
-constexpr uint8_t ANIMALS_TRACKLST2[ANIMALS_COUNT] = {35, 36, 37, 38, 39, 40};
+constexpr uint8_t ANIMALS_LEARN_TRACKLST1[ANIMALS_COUNT] = {29, 30, 31, 32, 33, 34};
+constexpr uint8_t ANIMALS_LEARN_TRACKLST2[ANIMALS_COUNT] = {35, 36, 37, 38, 39, 40};
+constexpr uint8_t ANIMALS_TEST_TRACKLIST1[ANIMALS_COUNT] = {41, 42, 43, 44, 45, 46};
+constexpr uint8_t ANIMALS_TEST1_CHOOSE_SOUND = 47;
+constexpr uint8_t ANIMALS_TEST2_CHOOSE_SOUND = 48;
+
+// uncomment this define for the first time arduino flash
+//#define ANIMALS_CLEAR_EEPROM
+constexpr uint8_t ANIMALS_EEPROM_ADRESS = 2;
 
 
-Keypad keypad(makeKeymap(KEYPAD_KEYS), ROW_PINS, COL_PINS, KEYPAD_ROWS, KEYPAD_COLS);
-CPlayer player(PLAYER_WAIT_BEFORE_PLAY_NEXT_MILLIS, PLAYER_EEPROM_CELL_IDX);
-CRGBLED rgb_led(9, 10, 11);
-CColorsGame<CRGBLED, CRGBLED::Color, CPlayer> colors_game;
-
+/**
+ * OTHER
+ */
+/* Global variables and functions */
+constexpr uint32_t RESET_TIME_INTERVAL = 120000;
+enum class BoardFocus{Wait, Animals, Colors};
 
 CColorsGameMode colors_game_mode;
 bool colors_game_sound;
+void colorsIndicationUpd() {
+    LED_ENABLE_IF(colors_game_mode == CColorsGameMode::Learn, COLORS_MODE_LED_GREEN_PIN);
+    LED_ENABLE_IF(colors_game_mode == CColorsGameMode::Test, COLORS_MODE_LED_RED_PIN);
+    LED_ENABLE_IF(colors_game_sound, COLORS_SOUND_LED_PIN);
+}
 
+CAnimalsGameMode animals_game_mode;
+void animalsIndicationUpd() {
+    LED_ENABLE_IF(animals_game_mode == CAnimalsGameMode::Learn, ANIMALS_MODE_LED_GREEN_PIN);
+    LED_ENABLE_IF(animals_game_mode == CAnimalsGameMode::Test, ANIMALS_MODE_LED_RED_PIN);
+}
 
+/* Global objects */
+Keypad keypad(makeKeymap(KEYPAD_KEYS), ROW_PINS, COL_PINS, KEYPAD_ROWS, KEYPAD_COLS);
+CPlayer player(PLAYER_WAIT_BEFORE_PLAY_NEXT_MILLIS, PLAYER_EEPROM_CELL_IDX);
+CRGBLED rgb_led(9, 10, 11);
+CColorsGame<CRGBLED, CRGBLED::Color, CPlayer> colors_game(rgb_led, COLORS_COUNT);
+CAnimalsGame<CPlayer> animals_game(player, ANIMALS_COUNT, ANIMALS_LEARN_SOUNDPACKS_CNT, ANIMALS_TEST_SOUNDPACKS_CNT,
+        ANIMALS_EEPROM_ADRESS);
+BoardFocus board_focus;
+
+/**
+ * MAIN
+ */
 void setup() {
     int *x = new int;
     delete(x);
@@ -151,47 +185,115 @@ void setup() {
 #endif
 
     // ColorsGame setup
-    colors_game.init(rgb_led, COLORS_COUNT, COLORS_CLRS, COLORS_COMMANDS, COLORS_GAME_MODE_CMD, RANDOM_SEED);
+    colors_game.init(COLORS_CLRS, COLORS_COMMANDS, COLORS_GAME_MODE_CMD);
     colors_game.addPlayer(player);
-    colors_game.addSoundTracks(COLORS_TRACKS_NO, PLAYER_LEARN_START_TRACK_NO, PLAYER_TESTING_START_TRACK_NO,
+    colors_game.addSoundTracks(COLORS_TRACKS_NO, PLAYER_LEARN_START_TRACK_NO, PLAYER_TEST_START_TRACK_NO,
             PLAYER_CHOOSE_TRACK_NO, PLAYER_CORRECT_ANSW_TRACK_NO, PLAYER_WRONG_ANSW_TRACK_NO);
     colors_game.addSoundDisableCommand(COLORS_GAME_SOUND_CMD);
+    colors_game.loadRandomSeed(RANDOM_SEED);
 
     colors_game_mode = colors_game.getMode();
     colors_game_sound = colors_game.isSoundEnabled();
-    LED_ON((colors_game_mode == CColorsGameMode::Learn) ? COLORS_MODE_LED_GREEN_PIN : COLORS_MODE_LED_RED_PIN);
-    LED_OFF((colors_game_mode == CColorsGameMode::Learn) ? COLORS_MODE_LED_RED_PIN : COLORS_MODE_LED_GREEN_PIN);
-    LED_ENABLE_IF(colors_game_sound, COLORS_SOUND_LED_PIN);
 
+    // AnimalsGame setup
+    animals_game.loadCommands(ANIMALS_COMMANDS, ANIMALS_GAME_MODE_CMD, ANIMALS_SWITCH_TRACKLIST_CMD);
+    animals_game.loadBasicSounds(PLAYER_LEARN_START_TRACK_NO, PLAYER_TEST_START_TRACK_NO, PLAYER_CORRECT_ANSW_TRACK_NO,
+            PLAYER_WRONG_ANSW_TRACK_NO);
+    animals_game.addLearnSoundPack(0, ANIMALS_LEARN_TRACKLST1);
+    animals_game.addLearnSoundPack(1, ANIMALS_LEARN_TRACKLST2);
+    animals_game.addTestSoundPack(0, ANIMALS_LEARN_TRACKLST1, ANIMALS_TEST1_CHOOSE_SOUND);
+    animals_game.addTestSoundPack(1, ANIMALS_TEST_TRACKLIST1, ANIMALS_TEST2_CHOOSE_SOUND);
+    animals_game.loadLearnSoundpackSwitchTracks(PLAYER_NUMBERS_TRACKS_NO);
+    animals_game.loadTestSoundpackSwitchTracks(PLAYER_NUMBERS_TRACKS_NO);
+#ifdef ANIMALS_CLEAR_EEPROM
+    animals_game.eepromClear();
+#else
+    animals_game.loadDataFromEEPROM();
+#endif
+    animals_game.init();
+    animals_game_mode = animals_game.getMode();
+
+    board_focus = BoardFocus::Wait;
 }
 
 void loop() {
     player.tick();
+
+    uint64_t curr_time = millis();
+    static uint64_t reset_time_counter = curr_time;
+
+    if (curr_time - reset_time_counter > RESET_TIME_INTERVAL) {
+        reset_time_counter = curr_time;
+        board_focus = BoardFocus::Wait;
+
+        colors_game.reset();
+        colors_game_mode = colors_game.getMode();
+        colors_game_sound = colors_game.isSoundEnabled();
+        LED_OFF(COLORS_SOUND_LED_PIN);
+        LED_OFF(COLORS_MODE_LED_RED_PIN);
+        LED_ON(COLORS_MODE_LED_GREEN_PIN);
+
+        animals_game.reset();
+        animals_game_mode = animals_game.getMode();
+        LED_OFF(ANIMALS_MODE_LED_RED_PIN);
+        LED_ON(ANIMALS_MODE_LED_GREEN_PIN);
+
+        player.playTrack(PLAYER_NOTIFY_TRACK_NO);
+    }
 
     char key = keypad.getKey();
     if (!key) {
         return;
     }
 
+    reset_time_counter = curr_time;
+    if (board_focus == BoardFocus::Wait) {
+        colorsIndicationUpd();
+        animalsIndicationUpd();
+        board_focus = BoardFocus::Animals;
+    }
+
     if (colors_game.tick(key)) {
+        if (board_focus != BoardFocus::Colors) {
+            animals_game.reset();
+            animals_game_mode = animals_game.getMode();
+            animalsIndicationUpd();
+            board_focus = BoardFocus::Colors;
+        }
         if (colors_game_mode != colors_game.getMode()) {
             colors_game_mode = colors_game.getMode();
-            LED_ON((colors_game_mode == CColorsGameMode::Learn) ? COLORS_MODE_LED_GREEN_PIN : COLORS_MODE_LED_RED_PIN);
-            LED_OFF((colors_game_mode == CColorsGameMode::Learn) ? COLORS_MODE_LED_RED_PIN : COLORS_MODE_LED_GREEN_PIN);
+            colorsIndicationUpd();
         }
 
         if (colors_game_sound != colors_game.isSoundEnabled()) {
             colors_game_sound = colors_game.isSoundEnabled();
-            LED_ENABLE_IF(colors_game_sound, COLORS_SOUND_LED_PIN);
+            colorsIndicationUpd();
+        }
+        return;
+    }
+
+    if (animals_game.tick(key)) {
+        if (board_focus != BoardFocus::Animals) {
+            colors_game.reset();
+            colors_game_mode = colors_game.getMode();
+            colors_game_sound = colors_game.isSoundEnabled();
+            colorsIndicationUpd();
+            board_focus = BoardFocus::Animals;
+        }
+
+        if (animals_game_mode != animals_game.getMode()) {
+            animals_game_mode = animals_game.getMode();
+            animalsIndicationUpd();
         }
     }
 
     if (key == PLAYER_INC_VOL_KEY && player.incVolume()) {
-        player.playTrack(PLAYER_SYSTEM_SOUND_TRACK_NO);
+        player.playTrack(PLAYER_BEEP_TRACK_NO);
+        return;
     }
 
     if (key == PLAYER_DEC_VOL_KEY && player.decVolume()) {
-        player.playTrack(PLAYER_SYSTEM_SOUND_TRACK_NO);
+        player.playTrack(PLAYER_BEEP_TRACK_NO);
+        return;
     }
-
 }

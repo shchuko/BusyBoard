@@ -8,7 +8,7 @@ set(ARDUINO_CPU atmega328old)
 project(${PROJECT_NAME})
 
 # Define additional source and header files or default arduino sketch files
-set(${PROJECT_NAME}_SRCS busy_board.ino CRGBLED/CRGBLED.cpp CAnimalsGame/CAnimalsGame.cpp CPlayer/CPlayer.cpp)
+set(${PROJECT_NAME}_SRCS busy_board.ino CRGBLED/CRGBLED.cpp CPlayer/CPlayer.cpp)
 set(${PROJECT_NAME}_HDRS CRGBLED/CRGBLED.h CAnimalsGame/CAnimalsGame.h CColorsGame/CColorsGame.h CPlayer/CPlayer.h)
 
 ### Additional static libraries to include in the target.
