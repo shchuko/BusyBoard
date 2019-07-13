@@ -29,7 +29,7 @@ constexpr char KEYPAD_KEYS[KEYPAD_ROWS][KEYPAD_COLS] = {
         {'F', 'G', 'H', 'I', 'J'},
         {'K', 'L', 'M', 'N', 'O'},
         {'P', 'Q', 'R', 'S', 'T'},
-        {'U', 'X', 'X', 'X', 'Y'}
+        {'U', 'O', 'N', 'X', 'Y'}
 };
 
 uint8_t ROW_PINS[KEYPAD_ROWS] = {2, 3, 4, 5, 6};
