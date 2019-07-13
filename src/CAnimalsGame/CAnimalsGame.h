@@ -7,7 +7,7 @@
  * - Teting
  *
  * Notes:
- *  - PlayerT must have playTrack(),  playTrackNext(), stopPlaying() methods
+ *  - PlayerT must have playTrack(),  playTrackNext() methods
  *  - C++11 required
  */
 
@@ -293,7 +293,6 @@ CAnimalsGameMode CAnimalsGame<PlayerT>::getMode() const {
 template<typename PlayerT>
 void CAnimalsGame<PlayerT>::reset() {
     mode_ = CAnimalsGameMode::Learn;
-    player_->stopPlaying();
 }
 
 template<typename PlayerT>

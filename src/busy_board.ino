@@ -214,6 +214,8 @@ void setup() {
     animals_game_mode = animals_game.getMode();
 
     board_focus = BoardFocus::Wait;
+    colorsIndicationUpd();
+    animalsIndicationUpd();
 }
 
 void loop() {

@@ -7,7 +7,7 @@
  * - Testing
  *
  * Notes:
- * - PlayerT must have playTrack(),  playTrackNext(), stopPlaying() methods
+ * - PlayerT must have playTrack(),  playTrackNext() methods
  * - RGBLED_T must have setColor() method
  * - COLOR_T must have default COLOR_T() constructor
  * - C++11 required
@@ -218,7 +218,6 @@ template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
 void CColorsGame<RGBLED_T, COLOR_T, PlayerT>::reset() {
     mode_ = CColorsGameMode::Learn;
     rgbled_->setColor(COLOR_T());
-    player_->stopPlaying();
 }
 
 template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
