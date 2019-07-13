@@ -23,6 +23,8 @@ public:
      */
     CPlayer(uint32_t _play_next_interval, uint32_t _eeprom_idx);
 
+    ~CPlayer();
+
     /** Play track + clear play queue
      * @param _track_no
      */
@@ -52,7 +54,7 @@ public:
 
 private:
     static constexpr uint8_t VOLUME_LVL_MAX = 24;
-    static constexpr uint8_t VOLUME_LVL_MIN = 0;
+    static constexpr uint8_t VOLUME_LVL_MIN = 1;
 
     struct Node {
         Node *next_;

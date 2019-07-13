@@ -47,6 +47,7 @@ void CPlayer::tick() {
 
 void CPlayer::loadVolumeFromEEPROM() {
     EEPROM.get(eeprom_idx_volume_, volume_level_);
+    setVolume(volume_level_);
 }
 
 void CPlayer::updateVolume(uint8_t _volume_level) {
@@ -82,9 +83,15 @@ bool CPlayer::decVolume() {
 }
 
 void CPlayer::saveVolumeToEEPROM(uint8_t _volume_lvl) {
+    volume_level_ = _volume_lvl;
     EEPROM.update(eeprom_idx_volume_, volume_level_);
+    setVolume(volume_level_);
 }
 
 void CPlayer::stopPlaying() {
     stop();
+}
+
+CPlayer::~CPlayer() {
+    destroyPlayQueue();
 }
