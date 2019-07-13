@@ -1,8 +1,8 @@
 /**
- * Simple educating game for children
+ * Educating game for children
  * Helps to learn colors
  *
- * Have to modes:
+ * Has two modes:
  * - Learning
  * - Testing
  *
@@ -10,6 +10,7 @@
  * - PlayerT must have playTrack(),  playTrackNext(), stopPlaying() methods
  * - RGBLED_T must have setColor() method
  * - COLOR_T must have default COLOR_T() constructor
+ * - C++11 required
  */
 
 
@@ -28,7 +29,7 @@ template <typename RGBLED_T, typename COLOR_T, typename PlayerT = void>
 class CColorsGame {
 public:
 
-    CColorsGame();
+    CColorsGame(RGBLED_T &_rgbled, uint8_t _colors_count);
 
     /**
      * @param _rgbled - rgb used to play game
@@ -38,13 +39,11 @@ public:
      * @param _change_mode_command - command to be used to change game mode
      * @param _rnd_seed - random seed
      */
-    void init(RGBLED_T &_rgbled,
-              uint8_t _colors_count,
-              const COLOR_T *_colors,
+    void init(const COLOR_T *_colors,
               const char *_colors_commands,
-              char _change_mode_command,
-              unsigned long _rnd_seed);
+              char _change_mode_command);
 
+    void loadRandomSeed(unsigned long _rnd_seed);
 
     /** Connects player to the ColorsGame
      * @param _player - player object
@@ -77,7 +76,7 @@ public:
     /**
      * @return Current GameMode
      */
-    CColorsGameMode getMode();
+    CColorsGameMode getMode() const;
 
     /** Sets ColorsGame state to the default:
      *  - mode_: Learning
@@ -88,7 +87,7 @@ public:
     /**
      * @return true if sound is enabled, false if disabled
      */
-    bool isSoundEnabled();
+    bool isSoundEnabled() const;
 
 private:
     RGBLED_T *rgbled_;
@@ -126,9 +125,9 @@ private:
 
 
 template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
-CColorsGame<RGBLED_T, COLOR_T, PlayerT>::CColorsGame()
-        : rgbled_{nullptr}
-        , colors_count_{0}
+CColorsGame<RGBLED_T, COLOR_T, PlayerT>::CColorsGame(RGBLED_T &_rgbled, uint8_t _colors_count)
+        : rgbled_{&_rgbled}
+        , colors_count_{_colors_count}
         , colors_{nullptr}
         , colors_commands_{nullptr}
         , change_mode_command_{0}
@@ -149,15 +148,11 @@ CColorsGame<RGBLED_T, COLOR_T, PlayerT>::CColorsGame()
 
 template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
 void
-CColorsGame<RGBLED_T, COLOR_T, PlayerT>::init(RGBLED_T &_rgbled, uint8_t _colors_count, const COLOR_T *_colors,
-                                              const char *_colors_commands, char _change_mode_command,
-                                              unsigned long _rnd_seed) {
-    rgbled_ = &_rgbled;
+CColorsGame<RGBLED_T, COLOR_T, PlayerT>::init(const COLOR_T *_colors,
+                                              const char *_colors_commands, char _change_mode_command) {
     colors_ = _colors;
-    colors_count_ = _colors_count;
     colors_commands_ = _colors_commands;
     change_mode_command_ = _change_mode_command;
-    randomSeed(_rnd_seed);
     rgbled_->setColor(COLOR_T());
 }
 
@@ -215,7 +210,7 @@ bool CColorsGame<RGBLED_T, COLOR_T, PlayerT>::tick(char _command) {
 }
 
 template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
-CColorsGameMode CColorsGame<RGBLED_T, COLOR_T, PlayerT>::getMode() {
+CColorsGameMode CColorsGame<RGBLED_T, COLOR_T, PlayerT>::getMode() const {
     return mode_;
 }
 
@@ -227,7 +222,7 @@ void CColorsGame<RGBLED_T, COLOR_T, PlayerT>::reset() {
 }
 
 template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
-bool CColorsGame<RGBLED_T, COLOR_T, PlayerT>::isSoundEnabled() {
+bool CColorsGame<RGBLED_T, COLOR_T, PlayerT>::isSoundEnabled() const {
     return sound_enabled_;
 }
 
@@ -297,6 +292,11 @@ void CColorsGame<RGBLED_T, COLOR_T, PlayerT>::testModeNewColor() {
         player_->playTrackNext(choose_track_no_);
         player_->playTrackNext(tracks_no_[test_mode_color_idx_]);
     }
+}
+
+template<typename RGBLED_T, typename COLOR_T, typename PlayerT>
+void CColorsGame<RGBLED_T, COLOR_T, PlayerT>::loadRandomSeed(unsigned long _rnd_seed) {
+    randomSeed(_rnd_seed);
 }
 
 #endif //SRC_CCOLORSGAME_H
