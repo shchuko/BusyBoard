@@ -1,5 +1,6 @@
 # BusyBoard
 ### Educational toy for small children built on [Arduino Nano](https://arduino.cc) platform
+### Contains 21 toys
 ![PIC](https://github.com/shchuko/BusyBoard/blob/master/pics/photo_2019-07-14_01-39-17.jpg)
 
 #### Required libraries:
