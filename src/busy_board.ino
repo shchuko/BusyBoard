@@ -159,8 +159,6 @@ BoardFocus board_focus;
  * MAIN
  */
 void setup() {
-    int *x = new int;
-    delete(x);
     // indication LEDs setup
     pinMode(ANIMALS_MODE_LED_GREEN_PIN, OUTPUT);
     pinMode(ANIMALS_MODE_LED_RED_PIN, OUTPUT);
