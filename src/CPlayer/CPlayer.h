@@ -48,6 +48,8 @@ public:
 
     void saveVolumeToEEPROM(uint8_t _volume_lvl);
 
+    void stopPlaying();
+
 private:
     static constexpr uint8_t VOLUME_LVL_MAX = 24;
     static constexpr uint8_t VOLUME_LVL_MIN = 0;

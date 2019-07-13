@@ -84,3 +84,7 @@ bool CPlayer::decVolume() {
 void CPlayer::saveVolumeToEEPROM(uint8_t _volume_lvl) {
     EEPROM.update(eeprom_idx_volume_, volume_level_);
 }
+
+void CPlayer::stopPlaying() {
+    stop();
+}

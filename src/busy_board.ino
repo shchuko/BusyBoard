@@ -8,7 +8,7 @@
 
 
 /**
- * MACRO
+ * MACRO 5200
  */
 #define RANDOM_SEED     analogRead(A6)
 #define LED_ON(PIN)     digitalWrite((PIN), LOW)
