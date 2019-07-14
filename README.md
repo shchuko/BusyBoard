@@ -9,6 +9,6 @@
 #### CLion plugin that helped me a lot: [Arduino Support](https://github.com/vsch/CLionArduinoPlugin)
 C++11 languge standart used
 
-If you need electronic schemes, leave a message o my email (yaroshchuk2000@gmail.com). I'll create them.
+If you need electronic schemes, leave a message on my email (yaroshchuk2000@gmail.com). I'll create them.
 
-Tests videos on [YouTube](https://www.youtube.com/playlist?list=PLUyuASd7vFSLMeVNU48Kg185tAyJWg1JF)
+Tests videos on YouTube is [here](https://www.youtube.com/playlist?list=PLUyuASd7vFSLMeVNU48Kg185tAyJWg1JF)
