@@ -1,3 +1,2 @@
-* linguist-vendored
-*.d linguist-vendored=false
-*.make linguist-vendored=false
+*.d linguist-detectable=false
+*.make linguist-detectable=false
