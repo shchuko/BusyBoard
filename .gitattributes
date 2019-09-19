@@ -1,0 +1,2 @@
+* linguist-vendored
+*.d *.make linguist-vendored=false
