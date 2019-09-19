@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shchuko/P/Arduino/BusyBoard/src/CRGBLED/CRGBLED.cpp
+CRGBLED.h
+/home/shchuko/P/Arduino/BusyBoard/src/CRGBLED/CRGBLED.h
+
+/home/shchuko/P/Arduino/BusyBoard/src/CRGBLED/CRGBLED.h
+Arduino.h
+-
+

@@ -1,0 +1,16 @@
+/home/shchuko/.user_apps/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/shchuko/P/Arduino/BusyBoard/src
+-- Generating src
+-- Generating nano_EEPROM for library EEPROM
+-- Generating nano_CPlayer for library CPlayer
+-- Generating nano_DFMiniMp3 for library DFMiniMp3
+-- Found library CPlayer needs nano_DFMiniMp3
+-- Generating nano_Keypad for library Keypad
+-- Generating nano_Key for library Key
+-- Found library Keypad needs nano_Keypad;nano_Key
+-- Generating nano_CRGBLED for library CRGBLED
+-- Generating nano_CColorsGame for library CColorsGame
+-- Generating nano_CAnimalsGame for library CAnimalsGame
+-- Using /home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/avr-objcopy for converting firmware image to hex
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug

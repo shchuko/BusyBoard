@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shchuko/Arduino/libraries/Keypad/src/Key.cpp
+Key.h
+-
+
+/home/shchuko/Arduino/libraries/Keypad/src/Key.h
+Arduino.h
+-
+
+/home/shchuko/Arduino/libraries/Keypad/src/Keypad.cpp
+Keypad.h
+-
+
+/home/shchuko/Arduino/libraries/Keypad/src/Keypad.h
+Key.h
+/home/shchuko/Arduino/libraries/Keypad/src/Key.h
+

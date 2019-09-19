@@ -1,0 +1,15 @@
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/upload.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/src-upload.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/src-size.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/src.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_CColorsGame.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_CRGBLED.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_EEPROM.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_CORE.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_CAnimalsGame.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_CPlayer.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_DFMiniMp3.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_Keypad.dir
+/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/CMakeFiles/nano_Key.dir

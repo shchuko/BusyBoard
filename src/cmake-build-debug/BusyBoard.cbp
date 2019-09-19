@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="BusyBoard"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\cmake\;CMake Files\cmake\Platform\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_DFMiniMp3">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_DFMiniMp3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_DFMiniMp3"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_DFMiniMp3/fast">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_DFMiniMp3.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_DFMiniMp3/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BusyBoard-size">
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 BusyBoard-size"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_CORE">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_CORE.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_CORE"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_CORE/fast">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_CORE.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_CORE/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BusyBoard">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/BusyBoard.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 BusyBoard"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="BusyBoard/fast">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/BusyBoard.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 BusyBoard/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_Keypad">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_Keypad.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_Keypad"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_Keypad/fast">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_Keypad.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_Keypad/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_Key">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_Key.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_Key"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mini_Key/fast">
+				<Option output="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/libmini_Key.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/DFMiniMp3/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/utility"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/src"/>
+					<Add directory="/home/shchuko/Arduino/libraries/Keypad/src/Key/utility"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/include-fixed"/>
+					<Add directory="/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/../lib/gcc/avr/5.4.0/../../../../avr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 mini_Key/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Arduino.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/CDC.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Client.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial0.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial1.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial2.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial3.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/HardwareSerial_private.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/IPAddress.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/IPAddress.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/PluggableUSB.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/PluggableUSB.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Print.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Print.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Printable.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Server.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Stream.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Stream.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Tone.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBAPI.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBCore.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBCore.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/USBDesc.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Udp.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WCharacter.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WInterrupts.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WMath.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WString.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/WString.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/abi.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/binary.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/hooks.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/main.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/new.cpp">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/new.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring_analog.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring_digital.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring_private.h">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring_pulse.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/cores/arduino/wiring_shift.c">
+			<Option target="mini_CORE"/>
+		</Unit>
+		<Unit filename="/home/shchuko/Arduino/libraries/DFMiniMp3/src/DFMiniMp3.h">
+			<Option target="mini_DFMiniMp3"/>
+		</Unit>
+		<Unit filename="/home/shchuko/Arduino/libraries/Keypad/src/Key.cpp">
+			<Option target="mini_Keypad"/>
+			<Option target="mini_Key"/>
+		</Unit>
+		<Unit filename="/home/shchuko/Arduino/libraries/Keypad/src/Key.h">
+			<Option target="mini_Keypad"/>
+			<Option target="mini_Key"/>
+		</Unit>
+		<Unit filename="/home/shchuko/Arduino/libraries/Keypad/src/Keypad.cpp">
+			<Option target="mini_Keypad"/>
+			<Option target="mini_Key"/>
+		</Unit>
+		<Unit filename="/home/shchuko/Arduino/libraries/Keypad/src/Keypad.h">
+			<Option target="mini_Keypad"/>
+			<Option target="mini_Key"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/busy_board.ino">
+			<Option target="BusyBoard"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/BusyBoard_busy_board.ino.cpp">
+			<Option target="BusyBoard"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/cmake-build-debug/BusyBoard_busy_board.ino.cpp.rule">
+			<Option target="BusyBoard"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/cmake/ArduinoToolchain.cmake">
+			<Option virtualFolder="CMake Files\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shchuko/P/Arduino/BusyBoard/src/cmake/Platform/Arduino.cmake">
+			<Option virtualFolder="CMake Files\cmake\Platform\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,2 @@
+/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/avr-ar qc libmini_Keypad.a  CMakeFiles/mini_Keypad.dir/home/shchuko/Arduino/libraries/Keypad/src/Key.cpp.obj CMakeFiles/mini_Keypad.dir/home/shchuko/Arduino/libraries/Keypad/src/Keypad.cpp.obj
+/home/shchuko/.user_apps/arduino-1.8.9/hardware/tools/avr/bin/avr-ranlib libmini_Keypad.a

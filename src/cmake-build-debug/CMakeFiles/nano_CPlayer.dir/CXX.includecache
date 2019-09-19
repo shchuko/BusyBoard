@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/shchuko/.user_apps/arduino-1.8.9/hardware/arduino/avr/libraries/EEPROM/src/EEPROM.h
+inttypes.h
+-
+avr/eeprom.h
+-
+avr/io.h
+-
+
+/home/shchuko/Arduino/libraries/DFMiniMp3/src/DFMiniMp3.h
+
+/home/shchuko/P/Arduino/BusyBoard/src/CPlayer/CPlayer.cpp
+CPlayer.h
+/home/shchuko/P/Arduino/BusyBoard/src/CPlayer/CPlayer.h
+
+/home/shchuko/P/Arduino/BusyBoard/src/CPlayer/CPlayer.h
+Arduino.h
+-
+DFMiniMp3.h
+-
+EEPROM.h
+-
+

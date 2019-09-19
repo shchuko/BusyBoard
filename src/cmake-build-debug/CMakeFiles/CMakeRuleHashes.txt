@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+429345b64ee70da5cb72f35bde77d290 BusyBoard_busy_board.ino.cpp
+ff41d712b609bc38253d40c9fd0ab5ea CMakeFiles/src-size
+576aa14d2dbcb0ffc4ca39c69563eef3 CMakeFiles/src-upload
+429345b64ee70da5cb72f35bde77d290 src_busy_board.ino.cpp
